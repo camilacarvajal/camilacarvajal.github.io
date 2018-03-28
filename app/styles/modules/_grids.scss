@@ -1,0 +1,33 @@
+
+/* Vendor
+   ========================================================================== */
+@import "../../bower_components/susy/sass/_susy.scss";
+
+@include border-box-sizing;
+
+/* Changing Susy default global settings */
+$susy: (
+  // Tells Susy to use 12 columns */
+  columns: 12,
+  // Tells Susy that the container has a max-width of 1120px */
+  container: 1000px,
+  // Tells Susy to use border-box */
+  global-box-sizing: border-box 
+  );
+
+.container{
+  padding:0 20px;
+  @include container;
+}
+
+.work, .contact{
+  @media (min-width: 700px) {
+    @include span(4); 
+  }
+}
+
+.lastWork, .lastContact{
+  @media (min-width: 700px) {
+    @include span(4 last); 
+  }
+}

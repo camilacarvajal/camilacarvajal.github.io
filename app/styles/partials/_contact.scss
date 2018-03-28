@@ -1,0 +1,53 @@
+.contact, .lastContact{
+	background-color: $blue;
+	color: $white;
+	text-align: center;
+	padding: 30px;
+	transition: background, .4s, linear;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	//border: 5px solid $red;
+	
+	&:hover{
+		h2{
+			color: $yellow;
+		}
+	}
+
+	h2{
+		background: $white;
+		border-radius: 3px;
+		color: $black;
+		padding: 10px 0;
+		transition: background, .4s, linear;
+	}
+	p{
+		text-align: center;
+		color: $yellow;
+		font-size: 20px;
+		font-weight: bold;
+	}
+
+	.icon{
+		margin: 15px 0;
+	}
+}
+
+.contactBox{
+	width: 50%;
+	background-color: $yellow;
+	display: inline-block;
+	text-align: center;
+	padding: 30px;
+	transition: background, .4s, linear;
+
+	&:hover{
+		background-color: darken($yellow, 15%) !important;
+	}
+}
+
+@media (max-width: 768px) {
+	.contactBox{
+		width: 100%;
+	}
+}

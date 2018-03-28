@@ -1,0 +1,64 @@
+#behind {
+  position:absolute;
+  display:block;
+  background: #222;  
+  width: 100%;
+  height: $heroHeight;
+  z-index:-1;
+}
+
+
+#dusk{
+  background: $black;   
+  width: 100%;
+  height:$heroHeight;
+  z-index:0;
+  opacity: 0.3;
+  position: absolute;
+}
+
+/*Canvas Stuff*/
+
+.canvas{
+    height: $heroHeight;
+}
+
+canvas{
+  position: absolute; 
+  height: $heroHeight;
+  margin-top:25px;
+}
+
+#grass{
+  position: relative;
+  //display: block;
+  margin:0;
+  width:100%;
+  z-index: -5;
+}
+
+/* Name Fade in Stuff*/
+#center{
+  height:$heroHeight;
+}
+
+#Info{
+  z-index:0;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  color: $white;
+  line-height: 0;
+  font-size: 24px;
+  font-family: 'Lato', Helvetica;
+  font-weight: 200;
+  word-spacing: .25rem;
+  top: 50%;
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadeUpIn 
+{
+  from { opacity:0; top:150px; }
+  to { opacity:1; top: 50%; }
+}

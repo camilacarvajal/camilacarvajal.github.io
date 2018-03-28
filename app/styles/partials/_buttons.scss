@@ -1,0 +1,39 @@
+.goTo{
+	text-align: center;
+	padding: 5px 40px;
+	background: $red;
+	margin: 20px auto;
+	position: absolute;
+	transition: all .2s ease-in-out;
+
+	&:hover{
+		background: darken($red, 7%);
+	}
+}
+
+.read-more-button{
+	display: none;
+}
+
+.btn{
+	padding: 5px 20px;
+	color: $white;
+	background: $blue;
+	border-radius: 5px;
+
+	&:hover{
+		color: $white;
+		background: lighten($blue, 7%);
+	}
+}
+
+.big--btn{
+	padding: 10px 40px;
+	font-size: 1.5em;
+	background: $red;
+
+	&:hover{
+		color: $white;
+		background: darken($red, 7%);
+	}
+}

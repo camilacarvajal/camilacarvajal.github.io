@@ -1,0 +1,65 @@
+$heroHeight: 500px;
+$heroMobile: 400px;
+
+.hero{
+	width:100%;
+	max-height: $heroHeight;
+	overflow:hidden;
+	background-color:$black;
+	img{
+		width:100%;
+	}
+}
+
+.bigHero {
+	height: $heroHeight;
+}
+
+.smallHero {
+	height: $heroHeight/2;
+}
+
+.workHero{
+	background-image: url("../images/America.jpg");
+	background-position: 50% 50%;
+	  &:before{
+	    //background-image: url(/images/design.svg);
+	    // background-size: 100% 100%;
+	    background-repeat: repeat-x;
+	    width: 100%;
+	    content: " ";
+	    height: 500px;
+	    position: absolute;
+	    bottom:8px;
+	  }
+}
+
+.contactHero{
+	background-image: url("../images/America.jpg");
+	background-position: 50% 150%;
+	h1{
+		text-shadow: 0px 3px $black;
+	}
+}
+
+.verticalCenter{
+	position: relative;
+    height: 100%;
+    .innerCenter{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      padding: 0 5%;
+    }
+}
+
+@media (max-width: 768px) {
+	.bigHero {
+		height: $heroMobile;
+	}
+	.smallHero {
+		height: $heroMobile/2;
+	}
+}

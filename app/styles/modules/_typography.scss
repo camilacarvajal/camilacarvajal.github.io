@@ -1,0 +1,118 @@
+body{
+  letter-spacing: -.01em;
+  font-family: 'PT Sans', sans-serif;;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased !important;
+  //-webkit-nbsp-mode: space;
+}
+
+h1,h2,h3,h4,h5{
+  font-family: 'PT Sans', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+h1{
+  //font-family: 'Pacifico', sans-serif;
+  color: $black;
+  font-size: 4em;
+  line-height: 1em;
+  text-align:center;
+}
+
+h2{
+  font-family: 'Pacifico', sans-serif;
+  color: $red;
+  font-size: 2em;
+  text-align:center;
+}
+
+.text--bold{
+  font-weight: 700;
+}
+
+.text--center{
+  text-align: center;
+}
+
+a{
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .5s;
+}
+
+p{
+  font-size:1.15em;
+  text-align: left;
+  line-height: 1.7em;
+  letter-spacing: -.05;
+  color: $black;
+  
+  a{
+    color: $blue;
+    &:hover{
+      color: $yellow;
+    }
+  }
+
+  font-weight: 400;
+}
+
+ul{
+  text-align: left;
+}
+
+.fadeDown{
+  z-index:1;
+  width: 100%;
+  position: absolute;
+  animation: fadeUpIn 3s; 
+  -webkit-animation: fadeUpIn 3s; /* Safari and Chrome */
+}
+
+.fadeUp{
+  animation: fadeUpIn 1s; 
+  -webkit-animation: fadeUpIn 1s; /* Safari and Chrome */
+}
+
+.text--centered{
+  text-align: center;
+}
+
+.text--right{
+  text-align: right;
+}
+
+.text--left{
+  text-align: left;
+}
+
+.shadowed{
+  text-shadow: 3px 3px $black;
+}
+
+.pacifico{
+  font-family: 'Pacifico', sans-serif;
+}
+
+.layered--title{
+  margin-bottom:-12px;
+}
+
+.smallVerticalCenter{
+  line-height: $heroHeight/2;
+  h1{
+    width: 100%;
+    font-size: 4em;
+    text-shadow: 3px 3px $black;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;  
+  }
+  @media (max-width: 768px) {
+    line-height: $heroMobile/2;
+    h1{
+      font-size: 3em;
+    }
+  }
+}

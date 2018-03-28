@@ -1,0 +1,37 @@
+body{
+  height: 100%;
+  margin:0;
+  background: $cream;
+  //background: linear-gradient( 180deg, $cream 60%, $orange 80%, $red 100%);
+}
+
+.p-section{
+  padding: 40px 0;
+}
+
+.anchor{
+  position: absolute;
+  margin-top: -80px;
+}
+
+img{
+  max-width: 100%;
+}
+
+hr{
+  margin:2em 0;
+  border: 1px solid $black;
+}
+
+table{
+  width:100%;
+}
+
+.rounded{
+  border-radius: 100%;
+}
+
+.no--spacing{
+  margin: 0 !important;
+  padding: 0 !important;
+}

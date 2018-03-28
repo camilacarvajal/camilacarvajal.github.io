@@ -1,0 +1,44 @@
+{
+  "name": "camilasportfolio",
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "clean": "~0.2.0",
+    "handlebars": "~3.0.3",
+    "susy": "~2.2.5"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "~3.1.0",
+    "mocha": "~2.2.5",
+    "grunt-contrib-imagemin": "^2.0.1"
+  },
+  "version": "0.0.0",
+  "homepage": "https://github.com/camilacarvajal/CamilasPortfolio",
+  "authors": [
+    "Camila C camila.bear@gmail.com"
+  ],
+  "description": "Camila's Website",
+  "main": "index.html",
+  "keywords": [
+    "Portfolio",
+    "Development",
+    "Computer",
+    "Science",
+    "Design"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

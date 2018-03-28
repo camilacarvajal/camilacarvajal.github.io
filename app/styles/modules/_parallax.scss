@@ -1,0 +1,21 @@
+$heroHeight: 500px;
+$heroMobile: 400px;
+
+.parallax {
+	background-repeat: no-repeat;
+  	background-attachment: fixed;
+  	background-size: cover; 	
+}
+
+.texture{
+	width: 100%;
+	padding-bottom: 10px;
+
+	.box{
+		background: $black;
+		width: 100%;
+		height: 20px;
+	}
+
+	bottom-border: 10px dotted $black;
+}
