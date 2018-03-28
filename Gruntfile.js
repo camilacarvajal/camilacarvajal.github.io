@@ -559,6 +559,7 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', [
+    'clean:dist',
     'assemble',
     'svgstore:dist',
     //'useminPrepare',
@@ -573,8 +574,7 @@ module.exports = function (grunt) {
     'modernizr',
     'usemin', //unmaintained
     'filerev', //depreceated
-    'htmlmin',
-    'clean:dist'
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', [
