@@ -7,7 +7,3 @@ $(".read-more-button").click(function(){
   me.text(txt);
   $(".read-more-expand").slideToggle();
 }); 
-
-  
-
- 

@@ -146,6 +146,7 @@ module.exports = function (grunt) {
           dot: true,
           src: [
             '.tmp',
+            '.sass-cache',
             '<%= config.dist %>/*',
             '!<%= config.dist %>/.git*'
           ]
@@ -158,8 +159,8 @@ module.exports = function (grunt) {
     eslint: {
       target: [
         'Gruntfile.js',
-        '<%= config.app %>/scripts/{,*/}*.js',
-        '!<%= config.app %>/scripts/vendor/*',
+        '<%= config.dist %>/scripts/{,*/}*.js',
+        '!<%= config.dist %>/scripts/vendor/*',
         'test/spec/{,*/}*.js'
       ]
     },
@@ -532,7 +533,7 @@ module.exports = function (grunt) {
       'postcss',
       'assemble',
       'browserSync:livereload',
-      'compass:server',
+      'compass',
       'watch'
     ]);
   });
@@ -558,7 +559,6 @@ module.exports = function (grunt) {
   });
 
   grunt.registerTask('build', [
-    'clean:dist',
     'assemble',
     'svgstore:dist',
     //'useminPrepare',
@@ -572,8 +572,9 @@ module.exports = function (grunt) {
     'copy:dist',
     'modernizr',
     'usemin', //unmaintained
-    'filerev',
-    'htmlmin'
+    'filerev', //depreceated
+    'htmlmin',
+    'clean:dist'
   ]);
 
   grunt.registerTask('default', [
