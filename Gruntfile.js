@@ -479,28 +479,6 @@ module.exports = function (grunt) {
       }
     },
 
-    // Run some tasks in parallel to speed up build process
-    concurrent: {
-      server: [ // DEPRECIATED: Update this for serve instead
-        'babel:dist',
-        'copy:styles',
-        'sass:server',
-        'compass'
-        //'compass'
-      ],
-      test: [
-        'babel',
-        'copy:styles'
-      ],
-      dist: [
-        'babel',
-        'copy:styles',
-//        'imagemin:dist',
-        'svgmin',
-        'compass:dist',
-        'uglify:dist'
-      ]
-    },
 
     assemble: {
       pages: {
@@ -515,6 +493,29 @@ module.exports = function (grunt) {
           '<%= config.app %>/': ['<%= config.app %>/assemble/templates/pages/{,*/}*.hbs']
         }
       }
+    },
+
+
+    // Run some tasks in parallel to speed up build process
+    concurrent: {
+      server: [ // DEPRECIATED: Update this for serve instead
+        'babel:dist',
+        'copy:styles',
+        //'sass:server',
+        'compass:dist'
+      ],
+      test: [
+        'babel',
+        'copy:styles'
+      ],
+      dist: [
+        'babel',
+        'copy:styles',
+//        'imagemin:dist',
+        'svgmin',
+        'compass:dist',
+        'uglify:dist'
+      ]
     }
   });
 
@@ -527,13 +528,12 @@ module.exports = function (grunt) {
 
     grunt.task.run([
       'clean:server',
-      //'concurrent:server',
+      'concurrent:server',
       'svgstore:serve',
       'wiredep:task',
       'postcss',
       'assemble',
       'browserSync:livereload',
-      'compass',
       'watch'
     ]);
   });

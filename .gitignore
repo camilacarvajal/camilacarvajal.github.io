@@ -1,0 +1,11 @@
+#ignore node_module
+node_modules/
+
+#ignore .sass-cache
+.sass-cache/
+
+#ignore .tmp
+.tmp/
+
+#ignore bower stuf
+bower_components/
