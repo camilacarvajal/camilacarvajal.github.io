@@ -7,8 +7,5 @@ node_modules/
 #ignore .tmp
 .tmp/
 
-#ignore bower stuf
-bower_components/
-
 .DS_Store
 package-lock.json

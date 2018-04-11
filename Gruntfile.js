@@ -426,7 +426,7 @@ module.exports = function (grunt) {
         html: '<%= config.app %>/index.html',
         // explicitly specify the parent directory you are working in 
         // this is the the base of your links ( "/" ) 
-        root: 'app'
+        root: '<%= config.app %>/'
     },
 
     // Copies remaining files to places other tasks can use
