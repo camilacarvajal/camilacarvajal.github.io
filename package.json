@@ -53,6 +53,8 @@
     }
   },
   "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
     "handlebars-helpers": "^0.10.0",
     "modernizr": "^3.6.0"
   }

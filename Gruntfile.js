@@ -509,7 +509,7 @@ module.exports = function (grunt) {
         'copy:styles'
       ],
       dist: [
-        'babel',
+        'babel:dist',
         'copy:styles',
 //        'imagemin:dist',
         'svgmin',
@@ -538,6 +538,25 @@ module.exports = function (grunt) {
     ]);
   });
 
+  grunt.registerTask('build', [
+    'clean:dist',
+    'assemble',
+    'svgstore:dist',
+    //'useminPrepare',
+    'concurrent:dist',
+    'postcss',
+    'concat',
+    'wiredep:dist',
+    'compass',
+    'cssmin',
+    'uglify',
+    'copy:dist',
+    'modernizr',
+    'usemin', //unmaintained
+    //'filerev', //depreceated
+    'htmlmin'
+  ]);
+
   grunt.registerTask('server', function (target) {
     grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
     grunt.task.run([target ? ('serve:' + target) : 'serve']);
@@ -557,25 +576,6 @@ module.exports = function (grunt) {
       'mocha'
     ]);
   });
-
-  grunt.registerTask('build', [
-    'clean:dist',
-    'assemble',
-    'svgstore:dist',
-    //'useminPrepare',
-    'concurrent:dist',
-    'postcss',
-    'concat',
-    'wiredep:dist',
-    'compass',
-    'cssmin',
-    'uglify',
-    'copy:dist',
-    'modernizr',
-    'usemin', //unmaintained
-    'filerev', //depreceated
-    'htmlmin'
-  ]);
 
   grunt.registerTask('default', [
     'newer:eslint',
