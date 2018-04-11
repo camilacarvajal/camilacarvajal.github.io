@@ -20,6 +20,8 @@
 	<!-- endbuild -->
 
 	<!-- bower:css -->
+	<link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+	<link rel="stylesheet" href="../bower_components/clean/dist/clean.css" />
 	<!-- endbower -->
 	
 </head>
@@ -54,7 +56,7 @@
 	<div class="verticalCenter">
 		<div class="fadeDown innerCenter">
 			<h1 class="color--white shadowed pacifico"><img src="images/a.jpg" alt="Camila's Portrait" class="rounded framed">
-			why, hello bruh!</h1>
+			why, hello there!</h1>
 
 		    <!--<div id="Info"> - Crafting Experiences - </div>!-->
 		</div>
@@ -144,14 +146,14 @@
 		<p class="text--center">Or read what I'm learning today</p>
 		<a href="http://mdo.github.io/code-guide/">
 			<div class="contact">
-				<img src="/images/code-guide.png" class="">		
+				<img src="images/code-guide.png" class="">		
 				<p>Code guide by mdo</p>
 			</div>
 		</a><a href="https://medium.com/re-write/the-unicorn-workflow-design-to-code-with-atomic-design-principles-and-sketch-8b0fe7d05a37#.ukvlzlu0f"><div class="contact">
-			<img src="/images/atomic-design.png" class="">	
+			<img src="images/atomic-design.png" class="">	
 			<p>The Unicorn Workflow</p>
 		</div></a><a href="https://medium.com/bridge-collection/circling-ourselves-the-story-behind-asana-s-rebrand-e8247516705a#.f65znu343"><div class="lastContact">
-			<img src="/images/asana-brand.png" class="">	
+			<img src="images/asana-brand.png" class="">	
 			<p>Asana’s Rebrand</p>
 		</div></a>
 	</div>	
@@ -225,24 +227,24 @@
 			<li>
 				<a href="#home">
 					<svg class="icon">
-					  <image xlink:href="../images/home.svg" src="../images/menu-icon.png" alt="Home" class="icon shape-home" width="45" height="45" />
+					  <image xlink:href="images/home.svg" src="images/menu-icon.png" alt="Home" class="icon shape-home" width="45" height="45" />
 					</svg>
 					Home
 				</a>
 			</li><!--
 		!--><li><a href="#work">
 				<svg class="icon">
-					<image xlink:href="../images/work.svg" alt="Work" src="../images/menu-icon.png" width="45" height="45" />
+					<image xlink:href="images/work.svg" alt="Work" src="images/menu-icon.png" width="45" height="45" />
 				</svg>
 				Work</a></li><!-- 
 		!--><li><a href="#resume">
 				<svg class="icon">
-					<image xlink:href="../images/resume.svg" alt="Work" src="../images/menu-icon.png" width="45" height="45" />
+					<image xlink:href="images/resume.svg" alt="Work" src="images/menu-icon.png" width="45" height="45" />
 				</svg>
 				Resume</a></li><!-- 
 		!--><li><a href="#contact">
 				<svg class="icon">
-					<image xlink:href="../images/contact.svg" alt="Work" src="../images/menu-icon.png" width="45" height="45" />
+					<image xlink:href="images/contact.svg" alt="Work" src="images/menu-icon.png" width="45" height="45" />
 				</svg>
 				Contact</a></li><!-- 
 		!--></ul>
@@ -251,24 +253,25 @@
 
 <!-- Scripts component
 ================================================== -->
-<!-- build:js scripts/modernizr.js -->
+<!-- build:js scripts/vendor/modernizr.js -->
 	<script src="bower_components/modernizr/modernizr.js"></script>
 <!-- endbuild -->
 
-<!-- build:js scripts/vendor.js -->
-<!-- bower:js -->
-<script src="../bower_components/jquery/dist/jquery.js"></script>
-<script src="../bower_components/handlebars/handlebars.runtime.js"></script>
-<script src="../bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
- <script src='https://rawgithub.com/soulwire/sketch.js/master/js/sketch.min.js'></script>
-<!-- endbower -->
-<!-- endbuild -->
 
-<!-- build:js scripts/plugins.js -->
+<!-- bower:js -->
+<script src='../bower_components/jquery/dist/jquery.js'></script>
+<script src='../bower_components/bootstrap/dist/js/bootstrap.js'></script>
+<script src='../bower_components/handlebars/handlebars.js'></script>
+<script src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap.js'></script>
+<!-- endbower -->
+
+
+<!-- build:js scripts/app.js -->
 <script type="text/javascript" src="scripts/main.js"></script>
 <script type="text/javascript" src="scripts/canvas.js"></script>
 <script type="text/javascript" src="scripts/anchors.js"></script>
 <script type="text/javascript" src="scripts/read-more.js"></script>
+<script src='https://rawgithub.com/soulwire/sketch.js/master/js/sketch.min.js'></script>
 <!-- endbuild -->
 
 <!-- Start Google Analytics Script -->

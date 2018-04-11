@@ -20,6 +20,8 @@
 	<!-- endbuild -->
 
 	<!-- bower:css -->
+	<link rel="stylesheet" href="../bower_components/normalize-css/normalize.css" />
+	<link rel="stylesheet" href="../bower_components/clean/dist/clean.css" />
 	<!-- endbower -->
 	
 </head>
@@ -120,24 +122,24 @@
 			<li>
 				<a href="#home">
 					<svg class="icon">
-					  <image xlink:href="../images/home.svg" src="../images/menu-icon.png" alt="Home" class="icon shape-home" width="45" height="45" />
+					  <image xlink:href="images/home.svg" src="images/menu-icon.png" alt="Home" class="icon shape-home" width="45" height="45" />
 					</svg>
 					Home
 				</a>
 			</li><!--
 		!--><li><a href="#work">
 				<svg class="icon">
-					<image xlink:href="../images/work.svg" alt="Work" src="../images/menu-icon.png" width="45" height="45" />
+					<image xlink:href="images/work.svg" alt="Work" src="images/menu-icon.png" width="45" height="45" />
 				</svg>
 				Work</a></li><!-- 
 		!--><li><a href="#resume">
 				<svg class="icon">
-					<image xlink:href="../images/resume.svg" alt="Work" src="../images/menu-icon.png" width="45" height="45" />
+					<image xlink:href="images/resume.svg" alt="Work" src="images/menu-icon.png" width="45" height="45" />
 				</svg>
 				Resume</a></li><!-- 
 		!--><li><a href="#contact">
 				<svg class="icon">
-					<image xlink:href="../images/contact.svg" alt="Work" src="../images/menu-icon.png" width="45" height="45" />
+					<image xlink:href="images/contact.svg" alt="Work" src="images/menu-icon.png" width="45" height="45" />
 				</svg>
 				Contact</a></li><!-- 
 		!--></ul>
@@ -146,24 +148,25 @@
 
 <!-- Scripts component
 ================================================== -->
-<!-- build:js scripts/modernizr.js -->
+<!-- build:js scripts/vendor/modernizr.js -->
 	<script src="bower_components/modernizr/modernizr.js"></script>
 <!-- endbuild -->
 
-<!-- build:js scripts/vendor.js -->
-<!-- bower:js -->
-<script src="../bower_components/jquery/dist/jquery.js"></script>
-<script src="../bower_components/handlebars/handlebars.runtime.js"></script>
-<script src="../bower_components/bootstrap-sass/assets/javascripts/bootstrap.js"></script>
- <script src='https://rawgithub.com/soulwire/sketch.js/master/js/sketch.min.js'></script>
-<!-- endbower -->
-<!-- endbuild -->
 
-<!-- build:js scripts/plugins.js -->
+<!-- bower:js -->
+<script src='../bower_components/jquery/dist/jquery.js'></script>
+<script src='../bower_components/bootstrap/dist/js/bootstrap.js'></script>
+<script src='../bower_components/handlebars/handlebars.js'></script>
+<script src='../bower_components/bootstrap-sass/assets/javascripts/bootstrap.js'></script>
+<!-- endbower -->
+
+
+<!-- build:js scripts/app.js -->
 <script type="text/javascript" src="scripts/main.js"></script>
 <script type="text/javascript" src="scripts/canvas.js"></script>
 <script type="text/javascript" src="scripts/anchors.js"></script>
 <script type="text/javascript" src="scripts/read-more.js"></script>
+<script src='https://rawgithub.com/soulwire/sketch.js/master/js/sketch.min.js'></script>
 <!-- endbuild -->
 
 <!-- Start Google Analytics Script -->

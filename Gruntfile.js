@@ -281,7 +281,7 @@ module.exports = function (grunt) {
       dist: {
         src: [
           '<%= config.dist %>/styles/*.css',
-          '<%= config.dist %>/*.html'
+          '<%= config.dist %>/*.html',
         ]
       }
     },
@@ -302,13 +302,14 @@ module.exports = function (grunt) {
     // Reads HTML for usemin blocks to enable smart builds that automatically
     // concat, minify and revision files. Creates configurations in memory so
     // additional tasks can operate on them
-    //useminPrepare: {
-    //options: {
-    //    dest: '<%= config.dist %>'
-    //  },
-    //  html: '<%= config.app %>/index.html',
-    // css: ['.tmp/styles/{,*/}*.css']
-    //},
+
+    useminPrepare: {
+      options: {
+        dest: '<%= config.dist %>'
+      },
+      html: '<%= config.app %>/index.html',
+      css: ['.tmp/styles/{,*/}*.css']
+    },
 
     // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
@@ -399,7 +400,7 @@ module.exports = function (grunt) {
     uglify: {
       dist: {
          files: {
-           '<%= config.dist %>/scripts/plugins.js': [
+           '<%= config.dist %>/scripts/app.js': [
              '<%= config.app %>/scripts/*.js'
            ]
          }
@@ -413,10 +414,19 @@ module.exports = function (grunt) {
             dest: '<%= config.dist %>/scripts/app.js',
             src: [
               '<%= config.app %>/scripts/*.js'
+
             ]
           }
         ]
       }
+    },
+
+    concatBlocks: {
+        // specify which files contain the build blocks 
+        html: '<%= config.app %>/index.html',
+        // explicitly specify the parent directory you are working in 
+        // this is the the base of your links ( "/" ) 
+        root: 'app'
     },
 
     // Copies remaining files to places other tasks can use
@@ -541,15 +551,15 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean:dist',
     'assemble',
+    'wiredep',
+    //'concatBlocks',
     'svgstore:dist',
     //'useminPrepare',
     'concurrent:dist',
     'postcss',
-    'concat',
-    'wiredep:dist',
+    //'concat',  //might not need since we're uglifying
     'compass',
     'cssmin',
-    'uglify',
     'copy:dist',
     'modernizr',
     'usemin', //unmaintained
