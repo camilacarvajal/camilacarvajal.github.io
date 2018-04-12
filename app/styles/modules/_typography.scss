@@ -31,8 +31,10 @@ h2{
   font-weight: 700;
 }
 
-.text--center{
+.text--center, .text--center p{
   text-align: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 a{
@@ -47,6 +49,7 @@ p{
   line-height: 1.7em;
   letter-spacing: -.05em;
   color: $black;
+  max-width: 600px;
   
   a{
     color: $blue;
@@ -85,6 +88,10 @@ ul{
 
 .text--left{
   text-align: left;
+}
+
+.read-more-expand{
+  display: block;
 }
 
 .shadowed{

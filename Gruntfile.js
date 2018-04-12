@@ -540,7 +540,7 @@ module.exports = function (grunt) {
       'clean:server',
       'concurrent:server',
       'svgstore:serve',
-      'wiredep:task',
+      'wiredep',
       'postcss',
       'assemble',
       'browserSync:livereload',

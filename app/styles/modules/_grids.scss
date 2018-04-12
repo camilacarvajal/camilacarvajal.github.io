@@ -26,7 +26,7 @@ $susy: (
   }
 }
 
-.lastWork, .lastContact{
+.work:nth-child(3n + 3), .contact:nth-child(3n + 3){
   @media (min-width: 700px) {
     @include span(4 last); 
   }

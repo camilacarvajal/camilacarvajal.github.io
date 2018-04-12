@@ -2,7 +2,6 @@
   "name": "camilasportfolio",
   "dependencies": {
     "bootstrap": "~3.3.5",
-    "clean": "~0.2.0",
     "handlebars": "^4.0.11",
     "susy": "~2.2.5",
     "jquery": "^3.3.1",
