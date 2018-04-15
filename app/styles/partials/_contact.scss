@@ -1,4 +1,4 @@
-.contact, .lastContact{
+.contact{
 	background-color: $blue;
 	color: $white;
 	text-align: center;
@@ -6,6 +6,7 @@
 	transition: background, .4s, linear;
 	border-radius: 5px;
 	margin-bottom: 15px;
+	display: inline-block;
 	//border: 5px solid $red;
 	
 	&:hover{
@@ -47,7 +48,6 @@
 }
 
 @media (max-width: 768px) {
-	.contactBox{
-		width: 100%;
-	}
+	.contactBox, 
+	.contact{ width: 100%; }
 }
